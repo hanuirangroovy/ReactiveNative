@@ -54,7 +54,7 @@
 
 ### 1.2 Installing Requirements
 
-![React-Native-Interpreted-approach-architecture](img\React-Native-Interpreted-approach-architecture.png)
+![React-Native-Interpreted-approach-architecture](img/React-Native-Interpreted-approach-architecture.png)
 
 - Java, Xcode를 설치해야하는 이유
   - React Native 앱은 JavaScript로만 이루어지지 않음
@@ -81,12 +81,12 @@
 
 ### 1.3 How Does React Native Work
 
-![how-does-react-native-work](img\how-does-react-native-work.png)
+![how-does-react-native-work](img/how-does-react-native-work.png)
 
 - ReactNative앱을 만든 후 테스트할 때 시뮬레이터와 모든 소프트웨어를 다운받아야하는 이유
   - Reactive Native는 인터페이스로 우리와 운영 체제(iOS, 안드로이드) 사이에 있어서 React Native 코드를 만들면 그 코드는 iOS, Java 안드로이드 코드로 번역됨.
 
-![how-does-react-native-work2](img\how-does-react-native-work2.png)
+![how-does-react-native-work2](img/how-does-react-native-work2.png)
 
 - React Native가 실제로 작동하는 방법
 
