@@ -29,6 +29,8 @@
    7. [Delete](#37-Delete)
 
 4. [PUBLISHING OUR APPS](#4-PUBLISHING-OUR-APPS)
+   1. [React Native Web](#41-React-Native-Web)
+
 
 ## 1. Requirements
 
@@ -1436,6 +1438,63 @@
 
 
 ## 4. PUBLISHING OUR APPS
+
+### 4.1 React Native Web
+
+- app.json
+
+  - 어플리케이션을 원하는 대로 만들기 위해 편집해야 하는 파일
+  - https://docs.expo.dev/versions/latest/config/app/
+  - splash screen
+    - 앱이 로드되기 전에 보이는 scrren 또는 이미지
+
+- Platform
+
+  - 우리가 어떤 플랫폼에 있는지 알 수 있는 API
+
+  - https://reactnative.dev/docs/platform
+
+  - 예를 들어 alert의 경우 web에서 작동하지 않음.
+
+    - 이럴 경우 플랫폼 OS를 체크해 web이라면 브라우저 API(confirm) 사용
+
+    - ```
+      const deleteToDo = (key) => {
+          if (Platform.OS === "web") {
+            const ok = confirm("Do you want to delete tis To Do?");
+            if (ok) {
+              const newToDos = { ...toDos };
+              delete newToDos[key];
+              setToDos(newToDos);
+              saveToDos(newToDos);
+            }
+          } else {
+            Alert.alert("Delete To Do", "Are you sure?", [
+              { text: "Cancel" },
+              {
+                text: "I'm Sure",
+                style: "destructive",
+                onPress: () => {
+                  const newToDos = { ...toDos };
+                  delete newToDos[key];
+                  setToDos(newToDos);
+                  saveToDos(newToDos);
+                },
+              },
+            ]);
+          }
+      
+          return;
+        };
+      ```
+
+    
+
+
+
+
+
+
 
 
 
